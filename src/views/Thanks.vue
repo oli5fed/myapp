@@ -1,0 +1,68 @@
+<template>
+  <div class="thanks">
+      <md-card id="card-thanks">
+          <md-card-media>
+              <img src="../assets/thanks_pic.jpg" alt="Vue-Logo" class="logo-redirect">
+          </md-card-media>
+          <md-card-content>
+              <p class="thanks-content">
+                  Вы создали аккаунт на нашем сервисе. Теперь у Вас есть личный кабинет.
+              </p>
+          </md-card-content>
+          <md-card-actions>
+              <router-link to="/">
+                  <md-button class="md-raised md-primary">Перейти в кабинет</md-button>
+              </router-link>
+          </md-card-actions>
+      </md-card>
+  </div>
+</template>
+
+
+<style>
+    .thanks {
+        width: 35%;
+        min-width: 200px;
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%);
+        animation-name: thanks;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes thanks {
+        from {
+            opacity: 0;
+            top: -50%;
+        }
+        to {
+            opacity: 1;
+            top: 16%;
+        }
+    }
+
+    .thanks-content {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    #card-thanks {
+        background: rgba(255, 255, 255, 0.6);
+    }
+</style>
+
+
+<script>
+
+
+export default {
+  name: 'thanks',
+  components: {
+
+  }
+}
+</script>
